@@ -6,10 +6,16 @@
 
 
 ## conda 환경설정 
+```sh
 conda create --name python-study python=3.9
+```
 
 ## fast-api, uvicorn 설치 
+```sh
 conda install fastapi uvicorn
+```
 
 ## fast-api 실행
+```sh
 uvicorn main:app --reload
+```
