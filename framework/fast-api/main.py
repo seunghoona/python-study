@@ -1,14 +1,13 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-
 app = FastAPI()
 items = {}
 
 
 # 데이터 모델 정의
 class Item(BaseModel):
-    name: str
+    name: str = "myname"
     description: str = None
     price: float
     is_offer: bool = None
@@ -40,5 +39,5 @@ def update_item(item_id: int, item: Item):
 def delete_item(item_id: int):
     if item_id in items:
         del items[item_id]
-        return {"message": "Item deleted successfully"}
+        return {"messagse": "Item deleted successfully"}
     return {"error": "Item not found"}
