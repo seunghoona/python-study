@@ -1,4 +1,6 @@
 {
     "editor.defaultFormatter": "ms-python.black-formatter",
-    "notebook.defaultFormatter": "ms-python.black-formatter"
+    "notebook.defaultFormatter": "ms-python.black-formatter",
+    "python.defaultInterpreterPath": "/opt/anaconda3/bin/python",
+    "python.analysis.typeEvaluation.enableExperimentalFeatures": true
 }
