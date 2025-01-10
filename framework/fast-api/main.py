@@ -1,13 +1,16 @@
 from fastapi import FastAPI
-from .routers import users, items
-
+from utils import test
+from uvicorn import run
+from routers import member
 app = FastAPI()
 
-# 라우터 등록
-app.include_router(users.router)
-app.include_router(items.router)
+app.include_router(member.router)
 
 
 @app.get("/")
 def read_root():
-    return {"message": "Hello, FastAPI!"}
+    return test.items()
+
+
+if __name__ == "__main__":
+    run(app, host="0.0.0.0", port=8000)
